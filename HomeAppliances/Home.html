@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home Control</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Home.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Smart Home Control</h1>
+        </header>
+        <main>
+            <!-- Fan Control -->
+            <div class="appliance-card">
+                <div class="appliance-header">
+                    <i class="fas fa-fan"></i>
+                    <h2>Fan</h2>
+                </div>
+                <label class="control">
+                    Power:
+                    <input type="checkbox" id="fan-toggle" class="styled-checkbox">
+                    <span class="toggle-slider"></span>
+                </label>
+                <label class="control">
+                    Speed:
+                    <input type="range" min="1" max="5" id="fan-speed" oninput="updateValue('fan-speed-value', this.value)">
+                    <span class="range-value" id="fan-speed-value">3</span>
+                </label>
+            </div>
+
+            <!-- Air Conditioner Control -->
+            <div class="appliance-card">
+                <div class="appliance-header">
+                    <i class="fas fa-snowflake"></i>
+                    <h2>Air Conditioner</h2>
+                </div>
+                <label class="control">
+                    Power:
+                    <input type="checkbox" id="ac-toggle" class="styled-checkbox">
+                    <span class="toggle-slider"></span>
+                </label>
+                <label class="control">
+                    Temperature:
+                    <input type="range" min="16" max="32" id="ac-temp" oninput="updateValue('ac-temp-value', this.value)">
+                    <span class="range-value" id="ac-temp-value">24</span>
+                </label>
+            </div>
+
+            <!-- Lights Control -->
+            <div class="appliance-card">
+                <div class="appliance-header">
+                    <i class="fas fa-lightbulb"></i>
+                    <h2>Lights</h2>
+                </div>
+                <label class="control">
+                    Power:
+                    <input type="checkbox" id="lights-toggle" class="styled-checkbox">
+                    <span class="toggle-slider"></span>
+                </label>
+                <label class="control">
+                    Brightness:
+                    <input type="range" min="1" max="10" id="lights-brightness" oninput="updateValue('lights-brightness-value', this.value)">
+                    <span class="range-value" id="lights-brightness-value">5</span>
+                </label>
+            </div>
+        </main>
+    </div>
+    <script src="Home.js"></script>
+</body>
+</html>

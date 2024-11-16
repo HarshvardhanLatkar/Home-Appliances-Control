@@ -1,0 +1,121 @@
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #EAEFF2;
+    color: #333;
+
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    background-color: #007BFF;
+    color: white;
+    padding: 20px 0;
+    font-size: 1.8em;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: flex-start;
+    gap: 20px;
+    
+}
+
+.appliance-card {
+    width: 40%; 
+    height: 200px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.appliance-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.appliance-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.appliance-header i {
+    font-size: 2rem;
+    color: #007BFF;
+}
+
+.control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+input[type="range"] {
+    width: 60%;
+    accent-color: #007BFF;
+}
+
+.range-value {
+    font-size: 0.9em;
+    margin-left: 10px;
+    color: #222;
+    font-weight: bold;
+}
+
+.styled-checkbox {
+    display: none;
+}
+
+.styled-checkbox + .toggle-slider {
+    width: 40px;
+    height: 20px;
+    background: #ccc;
+    border-radius: 50px;
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.styled-checkbox + .toggle-slider::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: 0.3s;
+}
+
+.styled-checkbox:checked + .toggle-slider {
+    background: #007BFF;
+}
+
+.styled-checkbox:checked + .toggle-slider::after {
+    left: 22px;
+}
